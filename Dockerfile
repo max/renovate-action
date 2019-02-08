@@ -1,3 +1,4 @@
-FROM node:10.15-alpine as base
+FROM node:10.15-alpine
 RUN npm i -g renovate
-ENTRYPOINT ["./entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
