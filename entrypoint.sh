@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-sh -c "renovate --token $GITHUB_TOKEN $GITHUB_REPOSITORY"
+sh -c "node /usr/src/app/lib/renovate.js --token $GITHUB_TOKEN $GITHUB_REPOSITORY"
